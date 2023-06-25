@@ -1,0 +1,52 @@
+@font-face {
+    font-family: 'Wallpoet';
+    src: url('./Wallpoet.eot');
+    src: url('./Wallpoet.eot?#iefix') format('embedded-opentype'),
+        url('./Wallpoet.woff2') format('woff2'),
+        url('./Wallpoet.woff') format('woff'),
+        url('./Wallpoet.ttf') format('truetype'),
+        url('./Wallpoet.svg#Wallpoet') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('./Raleway-Regular.eot');
+    src: url('./Raleway-Regular.eot?#iefix') format('embedded-opentype'),
+        url('./Raleway-Regular.woff2') format('woff2'),
+        url('./Raleway-Regular.woff') format('woff'),
+        url('./Raleway-Regular.ttf') format('truetype'),
+        url('./Raleway-Regular.svg#Raleway-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Wallpoet';
+    src: url('./Wallpoet_1.eot');
+    src: url('./Wallpoet_1.eot?#iefix') format('embedded-opentype'),
+        url('./Wallpoet_1.woff2') format('woff2'),
+        url('./Wallpoet_1.woff') format('woff'),
+        url('./Wallpoet_1.ttf') format('truetype'),
+        url('./Wallpoet_1.svg#Wallpoet') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mitr';
+    src: url('./Mitr-Bold.eot');
+    src: url('./Mitr-Bold.eot?#iefix') format('embedded-opentype'),
+        url('./Mitr-Bold.woff2') format('woff2'),
+        url('./Mitr-Bold.woff') format('woff'),
+        url('./Mitr-Bold.ttf') format('truetype'),
+        url('./Mitr-Bold.svg#Mitr-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
