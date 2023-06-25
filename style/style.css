@@ -102,27 +102,76 @@ font-family: 'Wallpoet', cursive; */
 
 .main__fr {
     transform: skewX(-10deg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.main__img:hover {
-    filter: blur(8px) saturate(90%);
+.main__fr-cinema {
+    background-image: url(/style/images/movies_main.jpg);
 }
 
-/* .main__content {
-padding: 30px 20px;
-display: none;
-position: absolute;
-z-index: 3;
-} 
+.main__fr-pockemon {
+    background-image: url(/style/images/pockemon_main.jpg);
+}
+
+.main__fr-sw {
+    background-image: url(/style/images/sw_main.png);
+}
+
+.main__fr:hover {
+    .main__content {
+        visibility: visible;
+    }
+}
+
+.main__content {
+    backdrop-filter: blur(8px);
+    visibility: hidden;
+    height: 100%;
+    padding: 80px 20px;
+}
 
 .main__title {
-font-family: 'Mitr', sans-serif;  
-font-size: 35px;
-font-weight: 800;
-color: black;
-line-height: 110%;
-background-color: #f7fa5e;
-} */
+    font-family: 'Mitr', sans-serif;
+    font-size: 45px;
+    font-weight: 800;
+    color: black;
+    line-height: 120%;
+    padding-left: 15px;
+    margin-bottom: 50px;
+}
+
+.main__title-cinema {
+    background-color: #f7fa5e;
+}
+
+.main__title-pockemon {
+    background-color: #faa1ca;
+}
+
+.main__title-sw {
+    background-color: #8bfcff;
+}
+
+.main__text {
+    padding: 20px 20px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 32px;
+    line-height: 150%;
+}
+
+.main__text-cinema span {
+    background-color: #f7fa5e;
+}
+
+.main__text-pockemon span {
+    background-color: #f8b0d1;
+}
+
+.main__text-sw span {
+    background-color: #8bfcff;
+}
 
 /* POCKEMON */
 
