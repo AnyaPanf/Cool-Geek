@@ -171,6 +171,50 @@ font-family: 'Wallpoet', cursive; */
     transform: scale(1.1);
 }
 
+/* MOVIES */
+
+.movies {
+    background-color: rgb(19, 0, 18);
+}
+
+.filters {
+    background: linear-gradient(270deg, rgba(47, 0, 46, 1) 10%, rgba(12, 0, 47, 1) 100%);  
+} 
+
+.filters__wrapper {
+    display: flex;
+    padding: 10px 0 10px 120px;
+}
+
+.filters__items {
+    margin-right: 100px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    line-height: 150%;
+    transform: skewX(-15deg);
+    transform: skewY(-2deg);
+    cursor: pointer;
+    background-color: rgb(175, 76, 175);
+    padding: 0 15px;
+    
+    color: #ffffff;
+}
+
+.filters__items:hover {
+    transform: skewY(-4deg);  
+    box-shadow: 7px 4px 0px 0px rgba(247, 250, 94, 1);
+}
+
+.movies__wrapper {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 2px;
+}
+
+.movies__info {
+    background-color: rgb(37, 37, 37, 0.5);
+}
+
 
 /* POCKEMON */
 
@@ -207,6 +251,7 @@ font-family: 'Wallpoet', cursive; */
 
 .pockemon__card:hover {
     transform: scale(1.1);
+    transition: 0.6s;
     cursor: pointer;
 }
 

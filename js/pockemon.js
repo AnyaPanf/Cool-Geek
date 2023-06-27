@@ -15,7 +15,7 @@ const getPockemon = async () => {
             if (pockeArr.length === 20) {
                 pockeArr.forEach((el) => {
                     let card = document.createElement('div')
-                    card.className = 'pockemon__card'
+                    card.className = 'pockemon__card animate__animated animate__flipInX'
                     wrapper.appendChild(card)
 
                     let pockemonContent = document.createElement('div')
@@ -37,7 +37,7 @@ const getPockemon = async () => {
                     pockemonImg.appendChild(img)
                     img.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pockeId}.png`
 
-                    pockemonImg.addEventListener('click', () => {
+                    card.addEventListener('click', () => {
                         modal = document.createElement('div')
                         wrapper.appendChild(modal)
                         modal.className = 'pockemon__modal'
