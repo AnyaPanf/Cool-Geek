@@ -119,12 +119,6 @@ font-family: 'Wallpoet', cursive; */
     background-image: url(/style/images/sw_main.png);
 }
 
-.main__fr:hover {
-    .main__content {
-        visibility: visible;
-    }
-}
-
 .main__content {
     backdrop-filter: blur(8px);
     visibility: hidden;
@@ -173,6 +167,11 @@ font-family: 'Wallpoet', cursive; */
     background-color: #8bfcff;
 }
 
+.main__text:hover {
+    transform: scale(1.1);
+}
+
+
 /* POCKEMON */
 
 .pockemon {
@@ -180,6 +179,9 @@ font-family: 'Wallpoet', cursive; */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: scroll;
+
 }
 
 .pockemon__wrapper {
@@ -199,7 +201,7 @@ font-family: 'Wallpoet', cursive; */
 .pockemon__content {
     background-color: #ffffff;
     border-radius: 7px;
-    padding: 5px;
+    padding: 10px;
 }
 
 .pockemon__card:hover {
@@ -208,5 +210,11 @@ font-family: 'Wallpoet', cursive; */
 
 .pockemon__name {
     font-family: 'Mitr', sans-serif;
-    font-size: 20px;
+    font-size: 25px;
+    text-transform: capitalize;
+}
+
+.pockemon__img {
+    padding: 0 30px;
+    border: 1px solid black;
 }
