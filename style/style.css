@@ -181,7 +181,7 @@ font-family: 'Wallpoet', cursive; */
     background-repeat: no-repeat;
     background-attachment: fixed;
     overflow: scroll;
-
+    overflow-x: hidden;
 }
 
 .pockemon__wrapper {
@@ -190,6 +190,7 @@ font-family: 'Wallpoet', cursive; */
     gap: 20px;
     height: calc(100vh - 105px);
     padding: 20px 0 20px;
+    position: relative;
 }
 
 .pockemon__card {
@@ -206,6 +207,7 @@ font-family: 'Wallpoet', cursive; */
 
 .pockemon__card:hover {
     transform: scale(1.1);
+    cursor: pointer;
 }
 
 .pockemon__name {
@@ -217,4 +219,70 @@ font-family: 'Wallpoet', cursive; */
 .pockemon__img {
     padding: 0 30px;
     border: 1px solid black;
+}
+
+.pockemon__modal {
+    backdrop-filter: blur(8px);
+    width: 100%;
+    height: calc(100vh - 100px);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 20px;
+    position: fixed;
+}
+
+.pockemon__info {
+    width: 50%;
+    height: 300px;
+    display: grid;
+    gap: 40px;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: #ffffff;
+    border-radius: 20px;
+    border: 2px solid black;
+    background-image: url(./images/Pokemon_ball.png);
+    background-size: 15%;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    margin: 8% auto;
+    position: relative;
+    padding: 20px 0;
+}
+
+.pockemon__pic {
+    margin-left: 90px;
+}
+
+.pockemon__pic img {
+    object-fit: contain;
+}
+
+.pockemon__close {
+    position: absolute;
+    right: -30px;
+    top: -20px;
+    cursor: pointer;
+}
+
+.pockemon__title {
+    font-family: 'Mitr', sans-serif;
+    font-size: 40px;
+    text-transform: capitalize;
+    margin-bottom: 25px;
+}
+
+.pockemon__experience {
+    font-family: 'Mitr', sans-serif;
+    font-size: 25px;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+    color: rgb(219, 20, 20);
+}
+
+.pockemon__ability {
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    text-transform: capitalize;
+    color: #0a569e;
 }
