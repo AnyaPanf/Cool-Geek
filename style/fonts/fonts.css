@@ -50,3 +50,31 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Rubik Mono One';
+    src: url('./RubikMonoOne-Regular.eot');
+    src: url('./RubikMonoOne-Regular.eot?#iefix') format('embedded-opentype'),
+        url('./RubikMonoOne-Regular.woff2') format('woff2'),
+        url('./RubikMonoOne-Regular.woff') format('woff'),
+        url('./RubikMonoOne-Regular.ttf') format('truetype'),
+        url('./RubikMonoOne-Regular.svg#RubikMonoOne-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ysabeau Infant';
+    src: url('./YsabeauInfant-ExtraLight.eot');
+    src: url('./YsabeauInfant-ExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('./YsabeauInfant-ExtraLight.woff2') format('woff2'),
+        url('./YsabeauInfant-ExtraLight.woff') format('woff'),
+        url('./YsabeauInfant-ExtraLight.ttf') format('truetype'),
+        url('./YsabeauInfant-ExtraLight.svg#YsabeauInfant-ExtraLight') format('svg');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+

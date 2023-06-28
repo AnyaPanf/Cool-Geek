@@ -15,6 +15,11 @@ img {
     object-fit: cover;
 }
 
+button {
+    border: none;
+    background-color: transparent;
+}
+
 .container {
     max-width: 1230px;
     padding: 0 15px;
@@ -25,10 +30,12 @@ img {
 font-family: 'Raleway', sans-serif;
 font-family: 'Wallpoet', cursive; */
 
+/* font-family: 'Ysabeau Infant', sans-serif;
+font-family: 'Rubik Mono One', sans-serif;
+
 /* HEADER */
 
 .header {
-    /* background-color: #2f002e;  */
     background: linear-gradient(83deg, rgba(47, 0, 46, 1) 10%, rgba(12, 0, 47, 1) 100%);
 }
 
@@ -175,46 +182,135 @@ font-family: 'Wallpoet', cursive; */
 
 .movies {
     background-color: rgb(19, 0, 18);
-}
-
-.filters {
-    background: linear-gradient(270deg, rgba(47, 0, 46, 1) 10%, rgba(12, 0, 47, 1) 100%);  
-} 
-
-.filters__wrapper {
-    display: flex;
-    padding: 10px 0 10px 120px;
-}
-
-.filters__items {
-    margin-right: 100px;
-    font-family: 'Raleway', sans-serif;
-    font-size: 20px;
-    line-height: 150%;
-    transform: skewX(-15deg);
-    transform: skewY(-2deg);
-    cursor: pointer;
-    background-color: rgb(175, 76, 175);
-    padding: 0 15px;
-    
-    color: #ffffff;
-}
-
-.filters__items:hover {
-    transform: skewY(-4deg);  
-    box-shadow: 7px 4px 0px 0px rgba(247, 250, 94, 1);
+    overflow: scroll;
 }
 
 .movies__wrapper {
     display: grid;
-    grid-template-columns: repeat(5,1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 2px;
+    position: relative;
+}
+
+.movies__rating {
+    display: grid;
+    grid-template-columns: auto auto;
+    place-items: center;
+    background-color: #af4caf;
+    width: 60px;
+    height: 30px;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    transform: skewX(-10deg);
+}
+
+.movies__rating p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.movies__card {
+    position: relative;
 }
 
 .movies__info {
-    background-color: rgb(37, 37, 37, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgb(37, 37, 37, 0.8);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
 }
 
+.movies__title {
+    font-family: 'Rubik Mono One', sans-serif;
+    font-size: 20px;
+    color: #ffffff;
+    margin: 50px 0 0 0;
+}
+
+.movies__date {
+    font-family: 'Ysabeau Infant', sans-serif;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.movies__btn {
+    width: 100%;
+    height: 40px;
+    font-family: 'Ysabeau Infant', sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: rgb(37, 37, 37, 0.2);
+    border: 2px solid #ffffff;
+    color: #ffffff;
+}
+
+.movies__btn:hover {   
+    color: #252525;
+    background-color: #ffffff;
+}
+
+.movies__modal {
+    width: 100%;
+    top: 100px;
+    left: 0;
+    position: fixed;
+    background-color:  rgba(255, 255, 255, 0.35);
+    padding: 50px 0;
+}
+
+.movies__details {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 10px;
+    margin: auto auto;
+    background-color: #1b011a;
+    padding: 2px;
+    text-overflow: inherit;
+}
+
+.movies__close {
+    position: absolute;
+    right: 100px;
+    top: 30px;
+    cursor: pointer;
+}
+
+.movies__text {
+    padding: 10px;
+}
+
+.movies__name {
+    font-family: 'Rubik Mono One', sans-serif;
+    font-size: 25px;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+.movies__genre,
+.movies__lang {
+    font-family: 'Ysabeau Infant', sans-serif;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.movies__lang {
+    margin-bottom: 20px;
+}
+
+.movies__desc {
+    font-family: 'Ysabeau Infant', sans-serif;
+    font-size: 17px;
+    color: #ffffff;
+}
 
 /* POCKEMON */
 
@@ -251,7 +347,7 @@ font-family: 'Wallpoet', cursive; */
 
 .pockemon__card:hover {
     transform: scale(1.1);
-    transition: 0.6s;
+    /* transition: 0.6s; */
     cursor: pointer;
 }
 
@@ -270,10 +366,8 @@ font-family: 'Wallpoet', cursive; */
     backdrop-filter: blur(8px);
     width: 100%;
     height: calc(100vh - 100px);
-    position: absolute;
     bottom: 0;
     left: 0;
-    border-radius: 20px;
     position: fixed;
 }
 
