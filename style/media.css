@@ -1,4 +1,4 @@
-@media (max-width: 860px) {
+@media (max-width: 970px) {
     .container {
         max-width: 860px;
     }
@@ -37,12 +37,13 @@
         font-size: 18px;
     }
 
-    .movies__modal {
-        top: 30px;
+    .movies__details {
+        width: 65%;
     }
 
     .movies__close {
-        right: 50px;
+        right: 100px;
+        top: 120px;
     }
 
     .movies__name {
@@ -80,6 +81,21 @@
         font-size: 18px;
     }
 
+    /* SW */
+
+    .sw__list {
+        font-size: 22px;
+    }
+
+    .sw__intro {
+        grid-template-columns: repeat(4, 1fr);
+        padding-top: 20px;
+    }
+
+    .sw__card {
+        overflow: scroll;
+    }
+
 }
 
 @media (max-width: 610px) {
@@ -95,7 +111,7 @@
 
     .header__link-media {
         display: block;
-        max-width: 50px;
+        max-width: 40px;
     }
 
     .main__title {
@@ -153,11 +169,26 @@
     .pockemon__pic {
         margin-left: 30px;
     }
+
+    /* SW */
+
+    .sw__list {
+        font-size: 18px;
+    }
+
+    .sw__intro {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 450px) {
+    .header__logo {
+        max-width: 80px;
+    }
+
     .main__wrapper {
         grid-template-columns: 1fr;
+        overflow: scroll;
     }
 
     .main__fr {
@@ -178,19 +209,19 @@
         font-size: 14px;
     }
 
-    .movies__modal {
-        position: absolute;
-        height: 100vh;
-        top: inherit;
-        left: 0;
-    }
-
     .movies__details {
         grid-template-columns: 1fr;
+        margin: 20% auto;
+        width: 80%;
+        height: 60vh;
     }
 
     .movies__name {
         font-size: 18px;
+    }
+
+    .movies__close {
+        top: 20%;
     }
 
     /* POCKEMON */
@@ -198,12 +229,17 @@
     .pockemon__wrapper {
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
+        height: calc(100vh - 80px);
+    }
+
+    .pockemon__modal {
+        height: calc(100vh - 50px);
     }
 
     .pockemon__info {
         width: 80%;
         height: 250px;
-        margin: 15% auto;
+        margin: 25% auto;
         gap: 20px;
     }
 
@@ -222,5 +258,16 @@
 
     .pockemon__ability {
         font-size: 16px;
+    }
+
+    /* SW */
+
+    .sw__list {
+        font-size: 14px;
+    }
+
+    .sw__intro {
+        grid-template-columns: repeat(2, 1fr);
+        padding-top: 20px;
     }
 }

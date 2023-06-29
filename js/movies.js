@@ -1,4 +1,5 @@
 let wrapper = document.querySelector('.movies__wrapper')
+let movies = document.querySelector('.movies')
 
 const getMovie = async () => {
     let movie = await fetch('https://api.themoviedb.org/3/discover/movie?language=ru-RUS&api_key=baacee587b52679e93f67d12424c4cb3')
@@ -16,7 +17,7 @@ const getMovie = async () => {
         rating.className = 'movies__rating'
         card.appendChild(rating)
         let star = document.createElement('i')
-        star.className = '<fa-sharp fa-regular fa-star'
+        star.className = 'fa-sharp fa-regular fa-star'
         star.style.color = '#fdb068'
         rating.appendChild(star)
         let ratingText = document.createElement('p')
@@ -48,14 +49,14 @@ const getMovie = async () => {
             })
 
             btn.addEventListener('click', () => {
-                modal = document.createElement('div')
-                wrapper.appendChild(modal)
+                let modal = document.createElement('div')
+                movies.appendChild(modal)
                 modal.className = 'movies__modal'
-    
+
                 let moviesDetails = document.createElement('div')
                 moviesDetails.className = 'movies__details'
                 modal.appendChild(moviesDetails)
-    
+
                 let close = document.createElement('i')
                 moviesDetails.appendChild(close)
                 close.className = 'movies__close fa-sharp fa-solid fa-x fa-2xl fa-beat'
@@ -63,19 +64,19 @@ const getMovie = async () => {
                 close.addEventListener('click', () => {
                     modal.remove()
                 })
-    
+
                 let moviesPic = document.createElement('div')
                 moviesDetails.appendChild(moviesPic)
                 moviesPic.className = 'movies__pic'
-    
+
                 let img = document.createElement('img')
                 moviesPic.appendChild(img)
                 img.src = `https://image.tmdb.org/t/p/w500/${el.backdrop_path}`
-    
+
                 let moviesText = document.createElement('div')
                 moviesDetails.appendChild(moviesText)
                 moviesText.className = 'movies__text'
-    
+
                 let detailsTitle = document.createElement('h2')
                 moviesText.appendChild(detailsTitle)
                 detailsTitle.className = 'movies__name'
@@ -86,15 +87,15 @@ const getMovie = async () => {
                 genre.className = 'movies__genre'
                 let a = ''
                 let b = el
-                const getGenre = async() => {
+                const getGenre = async () => {
                     let genreData = await fetch('http://api.themoviedb.org/3/genre/movie/list?api_key=baacee587b52679e93f67d12424c4cb3')
                     let newGenreData = await genreData.json()
                     console.log(newGenreData)
                     newGenreData.genres.forEach((item) => {
                         b.genre_ids.forEach((i) => {
-                            if(i === item.id) {
+                            if (i === item.id) {
                                 a = `${a} ${item.name}`
-                                genre.innerText = `Жанр: ${a}` 
+                                genre.innerText = `Жанр: ${a}`
                             }
                         })
                     })
@@ -102,9 +103,9 @@ const getMovie = async () => {
                 getGenre()
 
                 let lang = document.createElement('p')
-                lang.className = 'movies__lang'     
+                lang.className = 'movies__lang'
                 moviesText.appendChild(lang)
-                if(el.original_language === 'en') {
+                if (el.original_language === 'en') {
                     lang.innerText = `Язык оригинала: английский`
                 } else if (el.original_language === 'es') {
                     lang.innerText = `Язык оригинала: испанский`
@@ -116,8 +117,6 @@ const getMovie = async () => {
                 detailsText.innerText = el.overview
             })
         })
-
-
     })
 }
 getMovie()

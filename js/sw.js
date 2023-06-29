@@ -3,8 +3,8 @@ let intro = document.createElement('div')
 intro.className = 'sw__intro'
 wrapper.appendChild(intro)
 
-const getRemoved = (a) => {
-   a.remove()
+const getRemoved = () => {
+    intro.remove()
 }
 
 let frList = Array.from(document.querySelectorAll('li'))
@@ -16,7 +16,7 @@ frList.forEach((el) => {
             let info = await fetch(`https://swapi.dev/api/${el.classList[0]}/`)
             let data = await info.json()
 
-            getRemoved(intro)
+            getRemoved()
 
             intro = document.createElement('div')
             intro.className = 'sw__intro'
@@ -47,17 +47,17 @@ frList.forEach((el) => {
                         let height = document.createElement('p')
                         modal.appendChild(height)
                         height.className = 'sw__char'
-                        height.innerText = `Height: ${elem.height}`      
+                        height.innerText = `Height: ${elem.height}`
                         let hairColor = document.createElement('p')
                         modal.appendChild(hairColor)
                         hairColor.className = 'sw__char'
-                        hairColor.innerText = `Hair color: ${elem.hair_color}`      
+                        hairColor.innerText = `Hair color: ${elem.hair_color}`
                         let eyeColor = document.createElement('p')
                         modal.appendChild(eyeColor)
                         eyeColor.className = 'sw__char'
                         eyeColor.innerText = `Eye color: ${elem.eye_color}`
 
-                        modal.addEventListener('click', () => {
+                        modal.addEventListener('mouseleave', () => {
                             modal.remove()
                         })
                     })
@@ -99,7 +99,7 @@ frList.forEach((el) => {
                         terrain.className = 'sw__char'
                         terrain.innerText = `Terrain: ${elem.terrain}`
 
-                        modal.addEventListener('click', () => {
+                        modal.addEventListener('mouseleave', () => {
                             modal.remove()
                         })
                     })
@@ -130,18 +130,17 @@ frList.forEach((el) => {
                         let starshipClass = document.createElement('p')
                         modal.appendChild(starshipClass)
                         starshipClass.className = 'sw__char'
-                        starshipClass.innerText = `Starship class: ${elem.starship_class}`      
+                        starshipClass.innerText = `Starship class: ${elem.starship_class}`
                         let passangers = document.createElement('p')
                         modal.appendChild(passangers)
                         passangers.className = 'sw__char'
-                        passangers.innerText = `Passangers: ${elem.passangers}`      
+                        passangers.innerText = `Passangers: ${elem.passangers}`
                         let crew = document.createElement('p')
                         modal.appendChild(crew)
                         crew.className = 'sw__char'
                         crew.innerText = `Crew: ${elem.crew}`
 
-                        console.log(elem);
-                        modal.addEventListener('click', () => {
+                        modal.addEventListener('mouseleave', () => {
                             modal.remove()
                         })
                     })
@@ -172,18 +171,17 @@ frList.forEach((el) => {
                         let vehicleClass = document.createElement('p')
                         modal.appendChild(vehicleClass)
                         vehicleClass.className = 'sw__char'
-                        vehicleClass.innerText = `Vehicle class: ${elem.vehicle_class}`      
+                        vehicleClass.innerText = `Vehicle class: ${elem.vehicle_class}`
                         let cargo = document.createElement('p')
                         modal.appendChild(cargo)
                         cargo.className = 'sw__char'
-                        cargo.innerText = `Cargo capacity: ${elem.cargo_capacity}`      
+                        cargo.innerText = `Cargo capacity: ${elem.cargo_capacity}`
                         let crew = document.createElement('p')
                         modal.appendChild(crew)
                         crew.className = 'sw__char'
                         crew.innerText = `Crew: ${elem.crew}`
 
-                        console.log(elem);
-                        modal.addEventListener('click', () => {
+                        modal.addEventListener('mouseleave', () => {
                             modal.remove()
                         })
                     })
@@ -214,18 +212,17 @@ frList.forEach((el) => {
                         let lang = document.createElement('p')
                         modal.appendChild(lang)
                         lang.className = 'sw__char'
-                        lang.innerText = `Language: ${elem.language}`      
+                        lang.innerText = `Language: ${elem.language}`
                         let classif = document.createElement('p')
                         modal.appendChild(classif)
                         classif.className = 'sw__char'
-                        classif.innerText = `Classification: ${elem.classification}`      
+                        classif.innerText = `Classification: ${elem.classification}`
                         let skin = document.createElement('p')
                         modal.appendChild(skin)
                         skin.className = 'sw__char'
                         skin.innerText = `Skin colors: ${elem.skin_colors}`
 
-                        console.log(elem);
-                        modal.addEventListener('click', () => {
+                        modal.addEventListener('mouseleave', () => {
                             modal.remove()
                         })
                     })
@@ -253,31 +250,29 @@ frList.forEach((el) => {
                         let episode = document.createElement('p')
                         modal.appendChild(episode)
                         episode.className = 'sw__char'
-                        episode.innerText = `Episode: ${elem.episode_id}`     
+                        episode.innerText = `Episode: ${elem.episode_id}`
                         let release = document.createElement('p')
                         modal.appendChild(release)
                         release.className = 'sw__char'
-                        release.innerText = `Release date: ${elem.release_date}`      
+                        release.innerText = `Release date: ${elem.release_date}`
                         let producer = document.createElement('p')
                         modal.appendChild(producer)
                         producer.className = 'sw__char'
                         producer.innerText = `Producer: ${elem.producer}`
+                        let opening = document.createElement('p')
+                        modal.appendChild(opening)
+                        opening.className = 'sw__char'
+                        opening.innerText = `Opening crawl: ${elem.opening_crawl}`
 
-                        console.log(elem);
-                        modal.addEventListener('click', () => {
+                        modal.addEventListener('mouseleave', () => {
                             modal.remove()
                         })
                     })
                 })
             }
-
-
-
         }
         getInfo()
-
     })
-
 })
 
 
