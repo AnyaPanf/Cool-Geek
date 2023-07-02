@@ -447,6 +447,7 @@ button {
     background-attachment: fixed;
     overflow: scroll;
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .sw__list {
@@ -496,6 +497,7 @@ button {
     position: relative;
     cursor: pointer;
     overflow: scroll;
+    overflow-x: hidden;
 }
 
 .sw__title {
